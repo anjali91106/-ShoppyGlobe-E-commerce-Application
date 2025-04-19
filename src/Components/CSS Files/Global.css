@@ -1,0 +1,55 @@
+/* default styles start */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-bgcolor: #c1baa1;
+    --secondary-bgcolor: #a59d84;
+    --hover-color: #ecebde;
+    --ternary-bgcolor: #d7d3bf;
+}
+
+body{
+    background-color: var(--primary-bgcolor);
+}
+
+/* default styles end */
+
+/* NavBar & header Styles start  */
+
+ul{
+    background-color: var(--secondary-bgcolor);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    width: auto;
+
+}
+
+li{
+    list-style: none;
+}
+
+li:hover{
+    color: var(--hover-color);
+    cursor: pointer;
+}
+
+/* NavBar & Header Styles end  */
+
+
+/* Home Page Styles start */
+
+.ProductDetails{
+    height: 50vh;
+    width: 50vh;
+    border: 2px solid red;
+    background-color: var(--ternary-bgcolor);
+}
+
+/* Home Page Styles End */
