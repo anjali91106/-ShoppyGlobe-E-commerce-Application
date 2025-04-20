@@ -8,6 +8,8 @@ import Cart from './Components/Cart.jsx'
 import CartItems from './Components/CartItems.jsx'
 import ProductDetails from './Components/ProductDetails.jsx'
 import ProductList from './Components/ProductsList.jsx'
+import { Provider } from 'react-redux'
+import {store} from './Redux/store.js'
 
 const appRouter = createBrowserRouter([
   {
@@ -15,7 +17,7 @@ const appRouter = createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: "/home",
+        path: "",
         element: <Home />
       },
       {
@@ -27,7 +29,7 @@ const appRouter = createBrowserRouter([
         element: <CartItems />
       },
       {
-        path: "/ProductDetails",
+        path: "/ProductDetails/:id",
         element: <ProductDetails />
       },
       {
@@ -42,6 +44,8 @@ const appRouter = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={appRouter}/>
+    <Provider store={store}>
+      <RouterProvider router={appRouter}/>
+    </Provider>
   </StrictMode>,
 )
