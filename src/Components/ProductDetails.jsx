@@ -3,13 +3,10 @@ import { useDispatch } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { addToCart } from "../Redux/cartSlice";
 import { BsArrow90DegRight ,BsArrowReturnLeft } from "react-icons/bs";
-// import { removeFromCart } from "../Redux/cartSlice";
 
 export default function ProductDetails() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
-  // const [quentity, setQuentity] = useState(0);
-  // const [cart, setCart] = useState("Add To Cart");
 
   const dispatch = useDispatch()
 
@@ -44,13 +41,7 @@ export default function ProductDetails() {
       <br />
 
       <div className="info">
-            {/* <div className="Quentity">
-            <h2>Quentity: {quentity}</h2>
-            <button className="quentitybtn" onClick={() => setQuentity(quentity + 1)}>+</button>
-            <button className="quentitybtn" onClick={() => setQuentity(Math.max(0, quentity - 1))}>-</button>
-            </div><br /> */}
-        
-            
+
             </div><br /><br />
             
             <h2>Brand: {product.brand}</h2>

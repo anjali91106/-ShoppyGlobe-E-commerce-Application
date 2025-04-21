@@ -3,7 +3,7 @@ import './CSS Files/Global.css';
 import { useState, useEffect } from 'react';
 import { fetchProducts } from "../Redux/productsSlice";
 import { useDispatch } from "react-redux";
-import { FaBars, FaTimes, FaHome  } from 'react-icons/fa'; // install react-icons if not already
+import { FaBars, FaTimes, FaHome  } from 'react-icons/fa'; 
 import { MdShoppingCartCheckout } from "react-icons/md";
 import { TbShoppingBagHeart } from "react-icons/tb";
 import { AiOutlineProduct } from "react-icons/ai";

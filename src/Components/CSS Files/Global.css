@@ -341,7 +341,18 @@ li:hover{
 
 @media only screen and (max-width: 600px) {
   .image-container{
-    display: grid;
+    width: 20vh;
+  }
+
+  .product-gallery{
+    width: 45vh;
+  }
+
+  .cartproduct{
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   li{

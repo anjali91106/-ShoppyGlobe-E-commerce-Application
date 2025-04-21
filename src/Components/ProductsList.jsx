@@ -10,18 +10,6 @@ const ProductList = () => {
     return (
         <>
     
-    
-        {/* <h1>ShoppyGlobe</h1> */}
-        {/* <img src="" alt="logoimage" /> */}
-    
-        {/* <input 
-        id="search" 
-        type="text" 
-        placeholder="Search"
-        onChange={(e) => setQuery(e.target.value)}
-        value={query}
-        /> */}
-    
         {status === "loading" && <p>Loading...</p>}
         {status === "failed" && <p>Error: {error}</p>}
     
