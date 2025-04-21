@@ -44,7 +44,7 @@ State Management: Redux Toolkit
 ![App Screenshot](./src/assets/Screenshot%202025-04-21%20134148.png)
 ![App Screenshot](./src/assets/Screenshot%202025-04-21%20134209.png)
 ![App Screenshot](./src/assets/Screenshot%202025-04-21%20134233.png)
-![App Screenshot](./src/assets/Screenshot%202025-04-21%20134258.png)
+![App Screenshot](./src/assets/Screenshot%202025-04-21%20181538.png)
 ![App Screenshot](./src/assets/Screenshot%202025-04-21%20134321.png)
 
 ### 🙋‍♀️ Author
