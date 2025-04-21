@@ -1,15 +1,51 @@
+# ShoppyGlobe Application
 
-# React + Vite
+A simple but unique way to shop with pastel color theme for eye comfort using react.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ⚙️ Features
 
-Currently, two official plugins are available:
+- Fetching Products from the Given Api 
+- Adding Products to Cart
+- REmoving Products From Cart
+- displaying the cart product indivisually 
+- Displaying all the products on screen
+- Home with Products details showing with a Welcome page
+- Displaying a single product that is selected
+- 404 not found page 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# -ShoppyGlobe-E-commerce-Application
+Follow these steps to set up the project locally:
+
+### 1. Clone the repository
+
+git clone https://github.com/anjali91106/-ShoppyGlobe-E-commerce-Application.git
+
+### 2. Install dependencies
+
+npm install
+npm install react-router-dom
+npm install @reduxjs/toolkit react-redux
+npm install react-icons
+
+### 3. Start the development server
+npm run dev
+
+
+### 🧰 Tech Stack
+Frontend: React, CSS
+
+Framework: Bootstrap
+
+State Management: Redux Toolkit
+
+## 📸 Screenshots
+![App Screenshot](./src/assets/Homepage.png)
+![App Screenshot](./src/assets/browsebookpage.png)
+![App Screenshot](./src/assets/addbookpage.png)
+
+### 🙋‍♀️ Author
+
+GitHub: @anjali91106
+Email: anjalisoni86904@gmail.com
