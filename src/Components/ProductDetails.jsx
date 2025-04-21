@@ -60,6 +60,7 @@ export default function ProductDetails() {
       <p>Description: {product.description}</p> 
       <Link to="/"><button className="backbtn">  back <BsArrowReturnLeft/> </button></Link>
       <button id="cartBtn" onClick={handleCartClick}>Add To Cart</button>
+      <button id="cartBtn">Buy Now</button>
       <Link to="/cart"><button id="cartBtn">Go To Cart <BsArrow90DegRight/></button></Link>
       
 

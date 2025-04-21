@@ -231,7 +231,15 @@ li:hover{
   padding: 5vh;
   border: 2px solid black;
   border-radius: 10%;
-  display: grid;
+  width: 100vh;
+  /* display: grid; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartcontainer{
+  
 }
 
 .cartBtn, .viewBtn{
