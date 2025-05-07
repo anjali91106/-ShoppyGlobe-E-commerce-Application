@@ -15,7 +15,7 @@ function App() {
         {/* ✅ Wrap lazy-loaded routes inside Suspense */}
         <Suspense fallback={<p>Loading component...</p>}>
           <Routes>
-            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
           </Routes>
         </Suspense>
 

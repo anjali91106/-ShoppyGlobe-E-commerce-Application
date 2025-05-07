@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const Home = () => {
-  const {items, status, error } = useSelector((state) => state.products);
-
-
+  const {products, status, error } = useSelector((state) => state.products);
   return (
     <>
 
@@ -17,7 +15,7 @@ const Home = () => {
      <br />
     <div className="ProductDetails">
       
-      {items?.map((product) => (
+      {products?.map((product) => (
         <div key={product.id} className="productbox">
          <img src={product.thumbnail || '/placeholder-image.jpg'} 
          alt={product.title} 

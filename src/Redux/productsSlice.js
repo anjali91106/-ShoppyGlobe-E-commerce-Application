@@ -4,8 +4,9 @@ export const fetchProducts = createAsyncThunk(
     "products/fetchProducts",
     async (query = "") => {
         const url = query 
-        ? `https://dummyjson.com/products/search?q=${query}`
-        : "https://dummyjson.com/products"; //fallbaCK TO FETCH ALL IF NO query
+        
+        ? `http://localhost:7002/products/search?q=${query}`
+        : "http://localhost:7002/products"; //fallbaCK TO FETCH ALL IF NO query
  
 
         const res = await fetch(url);
@@ -35,17 +36,21 @@ const productSlice = createSlice({
         error: null,
     },
     reducers: {
-        setProducts: (state, action) => {state.items = action.payload},
-        addProducts: (state, action) => {state.products.push(action.payload)}
+        setProducts: (state, action) => {
+            state.products = action.payload;
+        },
+        addProducts: (state, action) => {
+            state.products.push(action.payload);
+        }
     },
     extraReducers: (builder) => {
         builder
-        .addCase(fetchProducts.pending, (state)=> {
+        .addCase(fetchProducts.pending, (state) => {
             state.status = "loading";
         })
         .addCase(fetchProducts.fulfilled, (state, action) => {
             state.status = "succeeded";
-            state.items = action.payload;
+            state.products = action.payload; // use products here
         })
         .addCase(fetchProducts.rejected, (state, action) => {
             state.status = "failed";
@@ -53,6 +58,7 @@ const productSlice = createSlice({
         });
     }
 });
+
 
 export const {setProducts, addProducts} = productSlice.actions;
 export default productSlice.reducer;

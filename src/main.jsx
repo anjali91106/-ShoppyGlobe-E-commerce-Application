@@ -1,7 +1,7 @@
 
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import { createBrowserRouter , Router, RouterProvider} from 'react-router-dom'
+import { createBrowserRouter ,RouterProvider} from 'react-router-dom'
 import NotFound from './Components/NotFound.jsx'
 import Home from './Components/Home.jsx'
 import Cart from './Components/Cart.jsx'
@@ -10,13 +10,14 @@ import ProductList from './Components/ProductsList.jsx'
 import { Provider } from 'react-redux'
 import {store} from './Redux/store.js'
 
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
     element: <App/>,
     children: [
       {
-        path: "",
+        path: "/",
         element: <Home />
       },
       {
@@ -24,7 +25,7 @@ const appRouter = createBrowserRouter([
         element: <Cart />
       },
       {
-        path: "/ProductDetails/:id",
+        path: "/products/:id",
         element: <ProductDetails />
       },
       {
@@ -38,7 +39,7 @@ const appRouter = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-
+   
     <Provider store={store}>
       <RouterProvider router={appRouter}/>
     </Provider>

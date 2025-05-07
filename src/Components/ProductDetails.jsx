@@ -18,10 +18,15 @@ export default function ProductDetails() {
 
 
   useEffect(() => {
-    fetch(`https://dummyjson.com/products/${id}`)
-      .then(res => res.json())
+    fetch(`http://localhost:7002/products/${id}`)
+      .then(res => {
+       if(!res.ok) throw new Error("Product not found");
+       return res.json();
+      })
       .then(data => setProduct(data))
-      .catch(err => console.error("Failed to fetch product:", err));
+      .catch(err => {console.error("Failed to fetch product:", err);
+      setProduct(null);
+    });
   }, [id]);
 
   if (!product) return <p>Loading...</p>;
