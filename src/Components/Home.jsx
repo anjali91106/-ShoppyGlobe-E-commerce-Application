@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 const Home = () => {
-  const {items, status, error } = useSelector((state) => state.products);
+  const {items, status, error} = useSelector((state) => state.products);
 
 
   return (
@@ -16,6 +16,23 @@ const Home = () => {
      <br /><h1 className="welcome">Welcome to <span className="brand-name">ShoppyGlobe</span></h1>
      <br />
     <div className="ProductDetails">
+      
+      {items?.length === 0 && status === "succeeded" && (
+        <div className="not-found-container">
+          <div className="not-found-icon">🔍</div>
+          <h2 className="not-found-title">No Products Found</h2>
+          <p className="not-found-message">
+            We couldn't find any products matching your search. 
+            Try searching with different keywords.
+          </p>
+          <button 
+            className="clear-search-btn" 
+            onClick={() => window.location.reload()}
+          >
+            Clear Search & Show All Products
+          </button>
+        </div>
+      )}
       
       {items?.map((product) => (
         <div key={product.id} className="productbox">

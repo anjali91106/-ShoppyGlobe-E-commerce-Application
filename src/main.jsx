@@ -7,6 +7,10 @@ import Home from './Components/Home.jsx'
 import Cart from './Components/Cart.jsx'
 import ProductDetails from './Components/ProductDetails.jsx'
 import ProductList from './Components/ProductsList.jsx'
+import Login from './Components/Login.jsx'
+import Checkout from './Components/Checkout.jsx'
+import OrderConfirmation from './Components/OrderConfirmation.jsx'
+import OrderHistory from './Components/OrderHistory.jsx'
 import { Provider } from 'react-redux'
 import {store} from './Redux/store.js'
 
@@ -31,16 +35,29 @@ const appRouter = createBrowserRouter([
         path: "/ProductList",
         element: <ProductList />
       },
+      {
+        path: "/login",
+        element: <Login />
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />
+      },
+      {
+        path: "/order-confirmation",
+        element: <OrderConfirmation />
+      },
+      {
+        path: "/order-history",
+        element: <OrderHistory />
+      },
     ],
     errorElement: <NotFound />
   },
 ])
 
-
 createRoot(document.getElementById('root')).render(
-
     <Provider store={store}>
       <RouterProvider router={appRouter}/>
     </Provider>
-  
 )
