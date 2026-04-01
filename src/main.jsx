@@ -20,35 +20,35 @@ const appRouter = createBrowserRouter([
     element: <App/>,
     children: [
       {
-        path: "",
+        index: true,
         element: <Home />
       },
       {
-        path: "/cart",
+        path: "cart",
         element: <Cart />
       },
       {
-        path: "/ProductDetails/:id",
+        path: "ProductDetails/:id",
         element: <ProductDetails />
       },
       {
-        path: "/ProductList",
+        path: "ProductList",
         element: <ProductList />
       },
       {
-        path: "/login",
+        path: "login",
         element: <Login />
       },
       {
-        path: "/checkout",
+        path: "checkout",
         element: <Checkout />
       },
       {
-        path: "/order-confirmation",
+        path: "order-confirmation",
         element: <OrderConfirmation />
       },
       {
-        path: "/order-history",
+        path: "order-history",
         element: <OrderHistory />
       },
     ],

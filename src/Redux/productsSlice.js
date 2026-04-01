@@ -4,39 +4,46 @@ export const fetchProducts = createAsyncThunk(
     "products/fetchProducts",
     async (query = "") => {
         const url = query 
-        ? `https://dummyjson.com/products/search?q=${query}`
-        : "https://dummyjson.com/products"; //fallbaCK TO FETCH ALL IF NO query
- 
-
+            ? `https://dummyjson.com/products/search?q=${query}`
+            : "https://dummyjson.com/products";
+        
+        console.log("Fetching from URL:", url); // Debug log
+        
         const res = await fetch(url);
         if(!res.ok) throw new Error("Failed to fetch products");
         const data = await res.json();
+        
+        console.log("API Response:", data); // Debug log
+        
+        // Handle different response structures
+        const products = data.products || data || [];
+        console.log("Products found:", products.length); // Debug log
 
-        return data.products?.map((product) => ({
-          id: product.id,
-          title: product.title,
-          description: product.description?.slice(0, 100) + "..." || "No description",
-          price: product.price,
-          discountPercentage: product.discountPercentage,
-          rating: product.rating,
-          stock: product.stock,
-          brand: product.brand,
-          category: product.category || "General",
-          thumbnail: product.thumbnail,
-          images: product.images || [],
+        return products?.map((product) => ({
+            id: product.id,
+            title: product.title,
+            description: product.description?.slice(0, 100) + "..." || "No description",
+            price: product.price,
+            discountPercentage: product.discountPercentage,
+            rating: product.rating,
+            stock: product.stock,
+            brand: product.brand,
+            category: product.category || "General",
+            thumbnail: product.thumbnail,
+            images: product.images || [],
         })) || []; //fallback to empty array if mapping fails
 });
 
 const productSlice = createSlice({
     name: "products",
     initialState: {
-        products: [],
+        items: [],
         status: "idle",
         error: null,
     },
     reducers: {
         setProducts: (state, action) => {state.items = action.payload},
-        addProducts: (state, action) => {state.products.push(action.payload)}
+        addProducts: (state, action) => {state.items.push(action.payload)}
     },
     extraReducers: (builder) => {
         builder

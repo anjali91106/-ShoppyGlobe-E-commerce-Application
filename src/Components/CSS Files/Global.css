@@ -373,6 +373,38 @@ li:hover{
   background: var(--accent-pink);
 }
 
+.product-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.product-actions button {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.product-actions button:first-child {
+  background: var(--gradient-accent);
+  color: var(--dark);
+}
+
+.product-actions button:last-child {
+  background: var(--accent-blue);
+  color: var(--dark);
+}
+
+.product-actions button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
 /* Home Page Styles End */
 
 
