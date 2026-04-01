@@ -53,47 +53,43 @@ A fully-featured, modern e-commerce React application with Redux state managemen
 ## 📸 Screenshots
 
 ### 🏠 Home Page
-![Home Page](./src/assets/Screenshot%2026-03-31%20164044.png)
+![Home Page](./src/assets/Home.png)
 *Modern home page with elegant pastel design and product grid*
 
 ### 🎯 Product Details
-![Product Details](./src/assets/Screenshot%2026-03-31%20164055.png)
+![Product Details](./src/assets/product-details.png)
 *Detailed product view with specifications and purchase options*
 
 ### 🛒 Shopping Cart
-![Shopping Cart](./src/assets/Screenshot%2026-03-31%20164111.png)
+![Shopping Cart](./src/assets/cart.png)
 *Cart with quantity management and checkout options*
 
 ### 🔍 Search Functionality
-![Search](./src/assets/Screenshot%2026-03-31%20164135.png)
+![Search](./src/assets/search.png)
 *Real-time search with debouncing and input clearing*
 
 ### 👤 User Authentication
-![Login](./src/assets/Screenshot%2026-03-31%20164143.png)
+![Login](./src/assets/login-form.png)
 *Modern login interface with form validation*
 
 ### 📦 Checkout Process
-![Checkout](./src/assets/Screenshot%2026-03-31%20164218.png)
+![Checkout](./src/assets/checkout.png)
 *Complete checkout flow with payment options*
 
 ### 📋 Order Confirmation
-![Order Confirmation](./src/assets/Screenshot%2026-03-31%20164234.png)
+![Order Confirmation](./src/assets/order-confirm.png)
 *Detailed order receipt and confirmation*
 
 ### 📚 Order History
-![Order History](./src/assets/Screenshot%2026-03-31%20164303.png)
+![Order History](./src/assets/order-histroy.png)
 *User order history with past purchases*
 
 ### 🔔 Toast Notifications
-![Toast Notification](./src/assets/Screenshot%2026-03-31%20164333.png)
+![Toast Notification](./src/assets/product-added-to-cart.png)
 *Non-intrusive feedback system for user actions*
 
-### 🎨 Modern UI Elements
-![UI Elements](./src/assets/Screenshot%2026-03-31%20164346.png)
-*Glassmorphism effects and modern interactions*
-
 ### 📱 Responsive Design
-![Mobile View](./src/assets/Screenshot%2026-03-31%20164408.png)
+![Mobile View](./src/assets/responsive.png)
 *Mobile-optimized responsive layout*
 
 ## 🛠️ Technical Stack
